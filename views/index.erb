@@ -1,0 +1,11 @@
+<h1> Welcome to the amazing cookbook! </h1>
+
+<ul>
+  <% @recipe.each_with_index do |recipe, index| %>
+    <% x = recipe.done? ? "x" : " " %>
+    <%= recipe.name %>
+<!--     <%= "#{index + 1}. [#{x}] #{recipe.name} (#{recipe.rating}/5):
+      #{recipe.description} By #{recipe.author}" %> -->
+  <% end %>
+</ul>
+
